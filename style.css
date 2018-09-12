@@ -1,0 +1,10 @@
+.container {
+    width: 300px;
+    clear: both;
+  }
+  
+  .container input {
+    width: 100%;
+    clear: both;
+    display: block;
+  }
