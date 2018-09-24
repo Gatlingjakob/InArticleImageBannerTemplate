@@ -1,7 +1,16 @@
 <html>
     <head><link rel="stylesheet" type="text/css" href="style.css"></head>
     <body>
-        <h1>Interscroller Template</h1>
+
+    <div class="center">
+<a href="iatemplate.php">In-Article</a> &nbsp;&nbsp;    
+<a href="inttemplate.php">InterScroller</a> &nbsp;&nbsp;     
+<a href="intbgtemplate.php">InterScroller+Background</a>  
+</div>
+<br>
+<br>
+
+        <h1>InterScroller Template</h1>
         <div class="container">
             <form action="inttemplate.php" method="post" enctype="multipart/form-data">
                 Click-URL: <input type="text" name="url"><br>

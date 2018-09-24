@@ -8,3 +8,7 @@
     clear: both;
     display: block;
   }
+  .center{
+    margin: auto;
+    text-align: center;
+  }
