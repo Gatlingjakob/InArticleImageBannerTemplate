@@ -1,9 +1,9 @@
 <html>
     <head><link rel="stylesheet" type="text/css" href="style.css"></head>
     <body>
-        <h1>In-Article Template</h1>
+        <h1>Interscroller Template</h1>
         <div class="container">
-            <form action="iatemplate.php" method="post" enctype="multipart/form-data">
+            <form action="inttemplate.php" method="post" enctype="multipart/form-data">
                 Click-URL: <input type="text" name="url"><br>
                 Upload Image: <input type="file" name="fileToUpload" id="fileToUpload"> <br>
                 Tracking Pixel: <input type="text" name="track"><br>
@@ -29,21 +29,23 @@ ob_start(); ?>
 
 <!--HTML goes here-->
 
+
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
-<body style="margin:0px;padding:0px;">
-
-  <a href="<?php echo $clickurl ?>" target="_blank">
-  	<img src="<?php echo $filename?>" width="650" height="400"/>
-  </a>
-	
-	<img src="<?php echo $trackingpixel ?>" border="0" width="1" height="1"/>
-	
+<body style="margin:0px;padding:0px;background:#b9c5c3;">
+	<a href="<?php echo $clickurl ?>" target="_blank">
+		<div style="width:100vw;height:100vh;overflow:hidden;background-color:#009fe4;">
+			<img src="<?php echo $filename?>" width="300" height="500" style="height:auto;width:100%;margin-left:auto;margin-right:auto;"/>
+        </div>
+    </a>
+    <img src="<?php echo $trackingpixel ?>" border="0" width="1" height="1"/>
 </body>
 </html>
+
+
 <!--HTML ends here-->
 
 <?php 
@@ -63,7 +65,7 @@ $path = '/Applications/MAMP/htdocs/interscrollertemplate/template/' . $datetime.
         if (!file_exists($path)) {
             mkdir($path, 0777, true);
         }
-        file_put_contents($path . 'ia.html', $result);
+        file_put_contents($path . 'int.html', $result);
     } 
 
 ?>
